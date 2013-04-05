@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="Vista/js/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="Vista/js/Cifrado.js"></script>
+        <script type="text/javascript" src="Vista/js/login.js"></script>
+        <title>Login</title>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="form">
+                <h2>Iniciar sesion</h2>
+                <label for="txtNombreUsuario">Nombre de usuario: </label>
+                <input type="text" id="txtNombreUsuario" name="txtNombreUsuario" placeholder="Nombre de usuario" required/>
+                <input type="text" placeholder="Contraseña" required="" id="password" name="password"
+                       onkeyup="document.getElementById('hash').value = SHA1(document.getElementById('password').value)"/>
+                <input type="text" id="hash" name="hash" value=""/>
+                
+                <input type="button" onclick="ocultarPass('password')" value="Enviar" id="btnEnviar"/>
+            </div>
+        </div>
+    </body>
+</html>
